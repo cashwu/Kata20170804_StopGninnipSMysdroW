@@ -27,6 +27,36 @@ namespace Kata20170804_StopGninnipSMysdroW
             AssertSpinWordsShouldBe("fellow", "wollef");
         }
 
+        [TestMethod]
+        public void input_Hey_fellow_warriors_should_return_Hey_wollef_sroirraw()
+        {
+            AssertSpinWordsShouldBe("Hey wollef sroirraw", "Hey fellow warriors");
+        }
+
+        [TestMethod]
+        public void input_This_is_a_test_should_return_This_is_a_test()
+        {
+            AssertSpinWordsShouldBe("This is a test", "This is a test");
+        }
+
+        [TestMethod]
+        public void input_This_is_another_test_should_return_This_is_rehtona_test()
+        {
+            AssertSpinWordsShouldBe("This is another test", "This is rehtona test");
+        }
+
+        [TestMethod]
+        public void input_You_are_tsomla_to_the_last_test()
+        {
+            AssertSpinWordsShouldBe("You are almost to the last test", "You are tsomla to the last test");
+        }
+
+        [TestMethod]
+        public void input_Just_kidding_there_is_still_one_more()
+        {
+            AssertSpinWordsShouldBe("Just gniddik ereht is llits one more", "Just kidding there is still one more");
+        }
+
         private static void AssertSpinWordsShouldBe(string expected, string sentence)
         {
             var kata = new Kata();
