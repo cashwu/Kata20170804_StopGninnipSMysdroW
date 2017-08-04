@@ -69,8 +69,7 @@ namespace Kata20170804_StopGninnipSMysdroW
     {
         public string SpinWords(string sentence)
         {
-            return string.Join(" ",
-                sentence.Split(new[] {' '}).Select(a => string.Join("", a.Length >= 5 ? a.Reverse() : a)));
+            return string.Join(" ", sentence.Split(' ').Select(a => a.Length >= 5 ? new string(a.Reverse().ToArray()) : a));
         }
     }
 }
