@@ -14,6 +14,12 @@ namespace Kata20170804_StopGninnipSMysdroW
             AssertSpinWordsShouldBe("test", "test");
         }
 
+        [TestMethod]
+        public void input_This_test_should_return_This_test()
+        {
+            AssertSpinWordsShouldBe("This test", "This test");
+        }
+
         private static void AssertSpinWordsShouldBe(string expected, string sentence)
         {
             var kata = new Kata();
