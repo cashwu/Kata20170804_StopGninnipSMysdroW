@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Kata20170804_StopGninnipSMysdroW
@@ -20,6 +21,12 @@ namespace Kata20170804_StopGninnipSMysdroW
             AssertSpinWordsShouldBe("This test", "This test");
         }
 
+        [TestMethod]
+        public void input_fellow_should_return_wollef()
+        {
+            AssertSpinWordsShouldBe("fellow", "wollef");
+        }
+
         private static void AssertSpinWordsShouldBe(string expected, string sentence)
         {
             var kata = new Kata();
@@ -32,7 +39,8 @@ namespace Kata20170804_StopGninnipSMysdroW
     {
         public string SpinWords(string sentence)
         {
-            return sentence;
+            return string.Join(" ",
+                sentence.Split(new[] {' '}).Select(a => string.Join("", a.Length >= 5 ? a.Reverse() : a)));
         }
     }
 }
